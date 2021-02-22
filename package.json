@@ -1,6 +1,6 @@
 {
-  "name": "sscjs",
-  "version": "0.0.8",
+  "name": "@hive-engine/sscjs",
+  "version": "0.0.9",
   "description": "a light javascript library to interact with the Steem/Hive Smart Contracts Sidechain",
   "main": "lib/ssc.js",
   "files": [
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hive-engine/sscjs"
+    "url": "git+https://github.com/hive-engine/sscjs.git"
   },
   "scripts": {
     "lint": "eslint src tests",
@@ -21,7 +21,7 @@
     "build:umd:min": "cross-env NODE_ENV=production BUILD_TYPE=umd rollup -c -o dist/ssc.min.js",
     "build": "npm run build:cjs && npm run build:umd && npm run build:umd:min",
     "pretest": "npm run build",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "harpagon210 <harpagon210@gmail.com>",
@@ -49,5 +49,13 @@
   },
   "jest": {
     "testRegex": "(/test/.*\\.js)$"
+  },
+  "bugs": {
+    "url": "https://github.com/hive-engine/sscjs/issues"
+  },
+  "homepage": "https://github.com/hive-engine/sscjs#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
