@@ -1,6 +1,6 @@
 import SSC from '../lib/ssc';
 
-const SSC_RPC_NODE = 'https://api.steem-engine.com/rpc/';
+const SSC_RPC_NODE = 'https://api.steem-engine.net/rpc/';
 
 describe('interaction with the SSC sidechain', () => {
   it('should get the contract information via callback', done => {
@@ -8,7 +8,7 @@ describe('interaction with the SSC sidechain', () => {
 
     ssc.getContractInfo('tokens', (err, res) => {
       expect(err).toBe(null);
-      expect(res.name).toBe('tokens');
+      expect(res._id).toBe('tokens');
       done();
     });
   });
@@ -16,7 +16,7 @@ describe('interaction with the SSC sidechain', () => {
   it('should get the contract information via promise', async () => {
     const ssc = new SSC(SSC_RPC_NODE);
     const response = await ssc.getContractInfo('tokens');
-    expect(response.name).toBe('tokens');
+    expect(response._id).toBe('tokens');
   });
 
   it('should get a record from a table', async () => {

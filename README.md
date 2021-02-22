@@ -1,9 +1,9 @@
 
 
   
-# [sscjs](https://github.com/harpagon210/sscjs) [![Build Status](https://travis-ci.org/harpagon210/sscjs.svg?branch=master)](https://travis-ci.org/harpagon210/sscjs)
+# [sscjs](https://github.com/hive-engine/sscjs) [![Build Status](https://travis-ci.com/hive-engine/sscjs.svg?branch=master)](https://travis-ci.com/hive-engine/sscjs)
 
-Light javascript library to interact with the JSON RPC server of [a Steem Smart Contracts node](https://github.com/harpagon210/steemsmartcontracts)
+Light javascript library to interact with the JSON RPC server of [a Steem Smart Contracts node](https://github.com/hive-engine/steemsmartcontracts)
 
 Installation
 ------------
@@ -18,7 +18,7 @@ npm install sscjs
 
 ### From a cdn or self-hosted script
 
-Grab `dist/ssc.min.js` from a [release](https://github.com/harpagon210/sscjs/releases) and include in your html:
+Grab `dist/ssc.min.js` from a [release](https://github.com/hive-engine/sscjs/releases) and include in your html:
 
 ```html
 <script src="ssc.min.js"></script>
@@ -41,7 +41,7 @@ This library requires the [axios library](https://github.com/axios/axios)
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sscjs@latest/dist/ssc.min.js"></script>
 <script>
-    const ssc = new SSC('https://testapi.steem-engine.com');
+    const ssc = new SSC('https://testapi.steem-engine.net');
     ssc.getLatestBlockInfo((err, result) => {
 		console.log(err, result);
 	});
@@ -53,7 +53,7 @@ This library requires the [axios library](https://github.com/axios/axios)
 ```javascript
 const SSC = require('sscjs');
 
-const ssc = new SSC('https://testapi.steem-engine.com');
+const ssc = new SSC('https://testapi.steem-engine.net');
 ssc.stream((err, res) => {
 	console.log(err, res);
 });
